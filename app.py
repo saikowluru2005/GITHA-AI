@@ -8,10 +8,6 @@ api=os.getenv("API-KEY")
 genai.configure(api_key=api)
 
 model = genai.GenerativeModel("gemini-1.5-flash")
-# genai.configure(api_key="API-KEY")
-
-# model = genai.GenerativeModel('gemini-1.5-flash')
-
 
 st.set_page_config(page_title="GITA AI", layout="centered")
 st.title("GITA AI")
