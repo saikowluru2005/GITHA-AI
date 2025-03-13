@@ -11,6 +11,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 st.set_page_config(page_title="GITA AI", layout="centered")
 st.title("GITA AI")
+st.header("छत्रपति संभाजी महाराज की जय!")
 st.write("Life Solutions from Mahabharata & Bhagavad Gita")
 
 st.write("""
