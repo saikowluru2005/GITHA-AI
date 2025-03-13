@@ -1,9 +1,16 @@
 import streamlit as st
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+load_dotenv()
+api=os.getenv("API-KEY")
 
-genai.configure(api_key="API-KEY")
+genai.configure(api_key=api)
 
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel("gemini-1.5-flash")
+# genai.configure(api_key="API-KEY")
+
+# model = genai.GenerativeModel('gemini-1.5-flash')
 
 
 st.set_page_config(page_title="GITA AI", layout="centered")
@@ -44,6 +51,7 @@ if st.button("Get Solution"):
                     2. Describe the scenario in detail and explain how it was resolved.
                     3. Provide a meaningful solution based on the teachings of the Mahabharata or Bhagavad Gita.
                     4. Include a relevant quote from the Mahabharata or Bhagavad Gita that supports the solution.
+                    5. Give everything in simple english
                     """
 
                     response = model.generate_content(solution_prompt)
